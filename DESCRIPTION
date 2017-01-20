@@ -1,11 +1,11 @@
 Package: tubeplayR
-Title: What the Package Does (one line, title case)
+Title: play youtube by R
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Authors@R: person("Kazuhiro", "Maeda", email = "kazu@kz-md.net", role = c("aut", "cre"))
+Description: play youtube by R.
 Depends:
     R (>= 3.3.2)
-License: What license is it under?
+License: MIT License.
 Encoding: UTF-8
 LazyData: true
 Imports:

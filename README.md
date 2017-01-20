@@ -17,3 +17,7 @@ Note argument `url` is a url for watch, **not embed url**.
 ## Sorry...
 
 This `tubeplay()` only play RStudio Server...
+
+## License
+
+MIT.

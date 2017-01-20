@@ -16,10 +16,10 @@ tubeplay <- function(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA", width 
   video_id <- gsub("^.*\\?v=", "", url)
   # make_ui
   ui <- miniUI::miniPage(
-    tags$iframe(width = width, height = height,
+    htmltools::tags$iframe(width = width, height = height,
                 src = paste("https://www.youtube.com/embed", video_id, sep = "/"),
                 frameborder="0")
   )
-  html_print(ui)
+  htmltools::html_print(ui)
 }
 
