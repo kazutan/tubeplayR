@@ -4,18 +4,18 @@
 \alias{tubeplay}
 \title{Play YouTube moview at RStudioServer}
 \usage{
-tubeplay(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA", width = "560",
-  height = "315", background = "white", viewer = getOption("viewer",
-  utils::browseURL))
+tubeplay(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
+  width = "100\%", height = "100\%", background = "white",
+  viewer = getOption("viewer", utils::browseURL))
 }
 \arguments{
 \item{url}{url that you want show Toutube movie}
 
-\item{width}{width of movie}
+\item{width}{ignored.}
 
-\item{height}{height of movie}
+\item{height}{ignored.}
 
-\item{background}{background color}
+\item{background}{ignored.}
 
 \item{viewer}{set viewer. See ?htmltools::html_print .}
 }
@@ -26,4 +26,3 @@ Play YouTube moview at RStudioServer
 tubeplay() # play default set movie
 tubeplay("https://www.youtube.com/watch?v=0E00Zuayv9Q") # play "PPAP"
 }
-
