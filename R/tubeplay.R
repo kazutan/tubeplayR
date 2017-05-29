@@ -16,7 +16,7 @@ tubeplay <- function(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
                      width = "100%", height = "100%", background = "white",
                      viewer = getOption("viewer", utils::browseURL)) {
   # set autoplay
-  autoplay <- paste("autoplay=", as.numeric(autoplay))
+  autoplay <- paste("?autoplay=", as.numeric(autoplay))
 
   # judge single or list
   if(grepl("playlist?", url)) {
