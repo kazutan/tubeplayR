@@ -5,11 +5,13 @@
 \title{Play YouTube moview at RStudioServer}
 \usage{
 tubeplay(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
-  width = "100\%", height = "100\%", background = "white",
-  viewer = getOption("viewer", utils::browseURL))
+  autoplay = TRUE, width = "100\%", height = "100\%",
+  background = "white", viewer = getOption("viewer", utils::browseURL))
 }
 \arguments{
 \item{url}{url that you want show Toutube movie}
+
+\item{autoplay}{Logical. Whether the movie play auto.}
 
 \item{width}{ignored.}
 
@@ -26,3 +28,4 @@ Play YouTube moview at RStudioServer
 tubeplay() # play default set movie
 tubeplay("https://www.youtube.com/watch?v=0E00Zuayv9Q") # play "PPAP"
 }
+
