@@ -22,7 +22,7 @@ tubeplay <- function(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
   if(grepl("playlist?", url)) {
     # set target for list
     target <- gsub("^.*\\.com/", "", url)
-    target <- gsub("playlist", "videoseries", target)
+#    target <- gsub("playlist", "videoseries", target)
   }else{
     # seto target for single
     target <- gsub("^.*\\?v=", "", url)
