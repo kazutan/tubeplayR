@@ -1,10 +1,6 @@
 #' Play YouTube moview at RStudioServer
 #'
 #' @param url url that you want show Toutube movie
-#' @param autoplay Logical. Whether the movie play auto.
-#' @param width ignored.
-#' @param height ignored.
-#' @param background ignored.
 #' @param viewer set viewer. See ?htmltools::html_print .
 #'
 #' @examples
@@ -12,11 +8,7 @@
 #' tubeplay("https://www.youtube.com/watch?v=0E00Zuayv9Q") # play "PPAP"
 #' @export
 tubeplay <- function(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
-                     autoplay = FALSE,
-                     width = "100%", height = "100%", background = "white",
                      viewer = getOption("viewer", utils::browseURL)) {
-  # set autoplay
-#  autoplay <- paste("?autoplay=", as.numeric(autoplay))
 
   # judge single or list
   if(grepl("playlist?", url)) {
@@ -55,7 +47,7 @@ tubeplay <- function(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
     htmltools::tags$div(class = "iframeWrap",
                         htmltools::tags$iframe(width = width,
                                                height = height,
-                                               src = paste("https://www.youtube.com/embed/", target, autoplay, sep = ""),
+                                               src = paste("https://www.youtube.com/embed/", target, sep = ""),
                                                frameborder="0")
     )
   )
