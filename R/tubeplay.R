@@ -1,4 +1,4 @@
-#' Play YouTube moview at RStudioServer
+#' Play YouTube moview at RStudio
 #'
 #' @param url url that you want show Toutube movie
 #' @param viewer set viewer. See ?htmltools::html_print .

@@ -9,7 +9,7 @@ devtools::install_github("kazutan/tubeplayR")
 
 ## How to Use
 
-First, run `tubeplay()`, and YouTube video start at RStudio Server **Viewer**.
+First, run `tubeplay()`, and YouTube video start at RStudio.
 
 If you want another YouTube video, run `tubeplay(url = "want/play/the/url")`. 
 Note argument `url` is a url for watch, **not embed url**.

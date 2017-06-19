@@ -2,7 +2,7 @@
 % Please edit documentation in R/tubeplay.R
 \name{tubeplay}
 \alias{tubeplay}
-\title{Play YouTube moview at RStudioServer}
+\title{Play YouTube moview at RStudio}
 \usage{
 tubeplay(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
   viewer = getOption("viewer", utils::browseURL))
@@ -13,7 +13,7 @@ tubeplay(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
 \item{viewer}{set viewer. See ?htmltools::html_print .}
 }
 \description{
-Play YouTube moview at RStudioServer
+Play YouTube moview at RStudio
 }
 \examples{
 tubeplay() # play default set movie
