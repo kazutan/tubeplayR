@@ -45,9 +45,7 @@ tubeplay <- function(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
                                 "-->"
                           )),
     htmltools::tags$div(class = "iframeWrap",
-                        htmltools::tags$iframe(width = width,
-                                               height = height,
-                                               src = paste("https://www.youtube.com/embed/", target, sep = ""),
+                        htmltools::tags$iframe(src = paste("https://www.youtube.com/embed/", target, sep = ""),
                                                frameborder="0")
     )
   )
