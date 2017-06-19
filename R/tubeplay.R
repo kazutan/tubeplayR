@@ -1,4 +1,4 @@
-#' Play YouTube moview at RStudioServer
+#' Play YouTube moview at RStudio
 #'
 #' @param url url that you want show Toutube movie
 #' @param viewer set viewer. See ?htmltools::html_print .
@@ -45,9 +45,7 @@ tubeplay <- function(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
                                 "-->"
                           )),
     htmltools::tags$div(class = "iframeWrap",
-                        htmltools::tags$iframe(width = width,
-                                               height = height,
-                                               src = paste("https://www.youtube.com/embed/", target, sep = ""),
+                        htmltools::tags$iframe(src = paste("https://www.youtube.com/embed/", target, sep = ""),
                                                frameborder="0")
     )
   )
