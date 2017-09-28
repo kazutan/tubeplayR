@@ -10,12 +10,12 @@
 tubeplay <- function(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
                      viewer = getOption("viewer", utils::browseURL)) {
 
-  # judge single or list
+  # judge youtube single or list
   if(grepl("playlist?", url)) {
     # set target for list
     target <- gsub("^.*\\.com/", "", url)
     target <- gsub("playlist", "videoseries", target)
-  }else{
+  }else if(grepl("^https://www.youtube.com/")){
     # seto target for single
     target <- gsub("^.*\\?v=", "", url)
     target <- gsub("\\&.*$", "", target)
@@ -44,10 +44,18 @@ tubeplay <- function(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
                                 "}",
                                 "-->"
                           )),
-    htmltools::tags$div(class = "iframeWrap",
+    if(grepl(".mp4$", url)) {
+      htmltools::tags$div(class = "mp4Wrap",
+                          paste("<video controls><source src=",
+                                url,
+                                " type='video/mp4>\n",
+                                "</video>"))
+    }else{
+      htmltools::tags$div(class = "iframeWrap",
                         htmltools::tags$iframe(src = paste("https://www.youtube.com/embed/", target, sep = ""),
                                                frameborder="0")
     )
+    }
   )
   htmltools::html_print(ui)
 }
