@@ -46,10 +46,10 @@ tubeplay <- function(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
                           )),
     if(grepl(".mp4$", url)) {
       htmltools::tags$div(class = "mp4Wrap",
-                          paste("<video controls><source src=",
-                                url,
-                                " type='video/mp4>\n",
-                                "</video>"))
+                          htmltools::HTML(paste("<video controls><source src=",
+                                                url,
+                                                " type='video/mp4>\n",
+                                                "</video>")))
     }else{
       htmltools::tags$div(class = "iframeWrap",
                         htmltools::tags$iframe(src = paste("https://www.youtube.com/embed/", target, sep = ""),
