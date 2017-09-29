@@ -50,7 +50,7 @@ tubeplay <- function(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
       htmltools::tags$div(class = "mp4Wrap",
                           htmltools::HTML(paste("<video controls><source src=",
                                                 file_path,
-                                                " type='video/mp4'></video>")))
+                                                " type='video/mp4'></video>", sep = "'")))
     }else{
       htmltools::tags$div(class = "iframeWrap",
                         htmltools::tags$iframe(src = paste("https://www.youtube.com/embed/", target, sep = ""),
