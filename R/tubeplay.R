@@ -48,9 +48,15 @@ tubeplay <- function(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
       wd_path <- getwd()
       file_path <- paste(wd_path, url, sep = "/")
       htmltools::tags$div(class = "mp4Wrap",
-                          htmltools::HTML(paste("<video controls><source src=",
+                          htmltools::HTML(paste0("<object data='",
                                                 file_path,
-                                                " type='video/mp4'></video>", sep = "'")))
+                                                "' type='video/mp4'>\n",
+                                                "<param name='src' value='",
+                                                file_path,
+                                                "'>\n",
+                                                "<param name='autoplay' value='false'>\n",
+                                                "<param name='controller' value='true'>\n",
+                                                "</object>")))
     }else{
       htmltools::tags$div(class = "iframeWrap",
                         htmltools::tags$iframe(src = paste("https://www.youtube.com/embed/", target, sep = ""),
