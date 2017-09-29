@@ -45,9 +45,11 @@ tubeplay <- function(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
                                 "-->"
                           )),
     if(grepl(".mp4$", url)) {
+      wd_path <- getwd()
+      file_path <- paste(wd_path, url, sep = "/")
       htmltools::tags$div(class = "mp4Wrap",
                           htmltools::HTML(paste("<video controls><source src=",
-                                                url,
+                                                file_path,
                                                 " type='video/mp4>\n",
                                                 "</video>")))
     }else{
