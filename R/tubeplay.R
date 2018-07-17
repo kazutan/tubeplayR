@@ -10,12 +10,12 @@
 tubeplay <- function(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
                      viewer = getOption("viewer", utils::browseURL)) {
 
-  # judge single or list
+  # judge youtube single or list
   if(grepl("playlist?", url)) {
     # set target for list
     target <- gsub("^.*\\.com/", "", url)
     target <- gsub("playlist", "videoseries", target)
-  }else{
+  }else if(grepl("^https://www.youtube.com/", url)){
     # seto target for single
     target <- gsub("^.*\\?v=", "", url)
     target <- gsub("\\&.*$", "", target)
@@ -44,10 +44,25 @@ tubeplay <- function(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
                                 "}",
                                 "-->"
                           )),
-    htmltools::tags$div(class = "iframeWrap",
+    if(grepl(".mp4$", url)) {
+      wd_path <- getwd()
+      file_path <- paste(wd_path, url, sep = "/")
+      htmltools::tags$div(class = "mp4Wrap",
+                          htmltools::HTML(paste0("<object data='",
+                                                file_path,
+                                                "' type='video/mp4' width='640' height='480'>\n",
+                                                "<param name='src' value='",
+                                                file_path,
+                                                "'>\n",
+                                                "<param name='autoplay' value='false'>\n",
+                                                "<param name='controller' value='true'>\n",
+                                                "</object>")))
+    }else{
+      htmltools::tags$div(class = "iframeWrap",
                         htmltools::tags$iframe(src = paste("https://www.youtube.com/embed/", target, sep = ""),
                                                frameborder="0")
     )
+    }
   )
   htmltools::html_print(ui)
 }

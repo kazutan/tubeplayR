@@ -1,5 +1,7 @@
 # tubeplayR
-play youtube by R.
+play youtube by RStudio(RStudio Server).
+
+![](src/pics/tubeplayR.png)
 
 ## install
 
@@ -16,9 +18,14 @@ Note argument `url` is a url for watch, **not embed url**.
 
 Yes, Youtube playlist is compatible. 
 
-## Sorry...
+## Envirnment to use this package
 
-This `tubeplay()` maybe does not work depending on your environment...
+This package can use in follow environmnent:
+
+- RStudio Server(Browser)
+- RStudio Desktop version on Mac
+
+RStudio Desktop version on Windows and Linux are not compatible. This causes RStudio's Qt... Please use virtual instance(e.g., Rocker).
 
 ## License
 
