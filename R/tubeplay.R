@@ -7,7 +7,7 @@
 #' tubeplay() # play default set movie
 #' tubeplay("https://www.youtube.com/watch?v=0E00Zuayv9Q") # play "PPAP"
 #' @export
-tubeplay <- function(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
+tubeplay <- function(url = "https://www.youtube.com/watch?v=XSLhsjepelI",
                      viewer = getOption("viewer", utils::browseURL)) {
 
   # judge youtube single or list
