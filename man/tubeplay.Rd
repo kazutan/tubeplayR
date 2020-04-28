@@ -4,8 +4,10 @@
 \alias{tubeplay}
 \title{Play YouTube moview at RStudio}
 \usage{
-tubeplay(url = "https://www.youtube.com/watch?v=iOFZKwv_LfA",
-  viewer = getOption("viewer", utils::browseURL))
+tubeplay(
+  url = "https://www.youtube.com/watch?v=XSLhsjepelI",
+  viewer = getOption("viewer", utils::browseURL)
+)
 }
 \arguments{
 \item{url}{url that you want show Toutube movie}
