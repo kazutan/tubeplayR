@@ -26,10 +26,7 @@ Yes, Youtube playlist is compatible.
 This package can use in follow environment:
 
   - RStudio Server(Browser)
-  - RStudio Desktop version on Mac
-
-RStudio Desktop version on Windows and Linux are not compatible. This
-causes RStudio’s Qt… Please use virtual instance(e.g., Rocker).
+  - RStudio Desktop v1.2 or later
 
 ## License
 
