@@ -2,20 +2,23 @@
 % Please edit documentation in R/tubeplay.R
 \name{tubeplay}
 \alias{tubeplay}
-\title{Play YouTube moview at RStudio}
+\title{Play YouTube movie at RStudio}
 \usage{
 tubeplay(
   url = "https://www.youtube.com/watch?v=XSLhsjepelI",
-  viewer = getOption("viewer", utils::browseURL)
+  viewer = getOption("viewer", utils::browseURL),
+  add_history = TRUE
 )
 }
 \arguments{
-\item{url}{url that you want show Toutube movie}
+\item{url}{url that you want show YouTube movie}
 
-\item{viewer}{set viewer. See ?htmltools::html_print .}
+\item{viewer}{set viewer. See ?htmltools::html_print.}
+
+\item{add_history}{whether add to play history or not.}
 }
 \description{
-Play YouTube moview at RStudio
+Play YouTube movie at RStudio
 }
 \examples{
 tubeplay() # play default set movie
