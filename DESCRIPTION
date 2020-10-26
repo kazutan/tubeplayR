@@ -1,6 +1,6 @@
 Package: tubeplayR
-Title: play youtube by R
-Version: 0.1.4
+Title: Play YouTube on RStudio
+Version: 0.1.4.9000
 Authors@R: person("Kazuhiro", "Maeda", email = "kazu@kz-md.net", role = c("aut", "cre"))
 Description: play youtube on RStudio.
 Depends:
