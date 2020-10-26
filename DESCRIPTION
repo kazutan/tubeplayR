@@ -2,7 +2,7 @@ Package: tubeplayR
 Title: play youtube by R
 Version: 0.1.4
 Authors@R: person("Kazuhiro", "Maeda", email = "kazu@kz-md.net", role = c("aut", "cre"))
-Description: play youtube by R.
+Description: play youtube on RStudio.
 Depends:
     R (>= 3.3.2)
 License: MIT License.
@@ -10,5 +10,8 @@ Encoding: UTF-8
 LazyData: true
 Imports:
     htmltools,
-    miniUI
+    miniUI,
+    fs,
+    rvest,
+    xml2
 RoxygenNote: 7.1.0
