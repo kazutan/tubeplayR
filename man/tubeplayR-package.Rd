@@ -4,7 +4,7 @@
 \name{tubeplayR-package}
 \alias{tubeplayR}
 \alias{tubeplayR-package}
-\title{tubeplayR: play youtube by R}
+\title{tubeplayR: Play YouTube on RStudio}
 \description{
 play youtube on RStudio.
 }
