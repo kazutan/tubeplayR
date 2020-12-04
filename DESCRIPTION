@@ -1,6 +1,6 @@
 Package: tubeplayR
 Title: Play YouTube on RStudio
-Version: 0.1.4.9000
+Version: 0.1.4.9001
 Authors@R: person("Kazuhiro", "Maeda", email = "kazu@kz-md.net", role = c("aut", "cre"))
 Description: play youtube on RStudio.
 Depends:
@@ -13,5 +13,7 @@ Imports:
     miniUI,
     fs,
     rvest,
-    xml2
+    xml2,
+    purrr,
+    dplyr
 RoxygenNote: 7.1.0

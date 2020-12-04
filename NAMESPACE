@@ -2,6 +2,12 @@
 
 export(tp_clean_user_dir)
 export(tp_clear_history)
+export(tp_create_new_plist)
 export(tp_get_history)
+export(tp_get_plist)
+export(tp_get_staged_plist)
+export(tp_next_plist)
+export(tp_remove_plist)
 export(tp_replay)
+export(tp_start_plist)
 export(tubeplay)
