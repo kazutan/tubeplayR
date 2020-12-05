@@ -37,8 +37,12 @@ tp_start_plist <- function(plist_id = NULL, plist_label = NULL, shuffle = FALSE)
   plist_all <- tp_get_plist()
 
   # attach plist
-  if (!is.null(plist_id) & length(plist_all) < plist_id) {
-    target_plist <- plist_all[[plist_id]]
+  if (!is.null(plist_id)) {
+    if (length(plist_all) < plist_id) {
+      target_plist <- plist_all[[plist_id]]
+    } else {
+      target_plist <- NULL
+    }
   } else if (!is.null(plist_label)) {
     target_plist <- plist_all[[plist_label]]
   } else {
