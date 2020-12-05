@@ -124,11 +124,11 @@ tp_next_plist <- function(skip = 1) {
   }
 
   # get state plist
-  state_plist <- readRDS(get_path_state_plist())
+  state_plist <- tp_get_staged_plist()
 
   # set tubeplay
   target_tube_info <- state_plist[skip,]
-  tubeplay(state_plist[skip, "url"])
+  tubeplay(state_plist[["url"]][skip])
 
   # remove played movie from state plist
   state_plist <- state_plist[-skip,]
