@@ -4,7 +4,7 @@
 \alias{tp_get_plist}
 \title{get plist}
 \usage{
-tp_get_plist(label = NULL, view = FALSE, print = FALSE)
+tp_get_plist(label = NULL, view = FALSE, print = FALSE, create_new = FALSE)
 }
 \description{
 get plist

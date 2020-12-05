@@ -16,7 +16,7 @@ tp_create_new_plist <- function(urls = NULL, tube_infos = NULL, label) {
   }
 
   # add plist
-  plist <- tp_get_plist()
+  plist <- tp_get_plist(create_new = TRUE)
   plist <- c(plist, list(df_plist))
   names(plist)[length(plist)] <- label
 
@@ -155,9 +155,9 @@ set_state_plist <- function(df_plist, shuffle) {
 #' get plist
 #'
 #' @export
-tp_get_plist <- function(label = NULL, view = FALSE, print = FALSE) {
+tp_get_plist <- function(label = NULL, view = FALSE, print = FALSE, create_new = FALSE) {
   # get the path fo plist file
-  path_user_tp_plist <- check_user_tp_plist(create_new = FALSE)
+  path_user_tp_plist <- check_user_tp_plist(create_new = create_new)
   # get user's plist
   tubeplay_plist <- readRDS(path_user_tp_plist)
 
