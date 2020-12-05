@@ -21,7 +21,7 @@ tp_create_new_plist <- function(urls = NULL, tube_infos = NULL, label) {
   names(plist)[length(plist)] <- label
 
   # save plist
-  path_plist <- check_user_tp_plist(create_new = FALSE)
+  path_plist <- check_user_tp_plist(create_new = TRUE)
   saveRDS(plist, path_plist)
 
   # return
