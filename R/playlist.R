@@ -33,7 +33,7 @@ tp_create_new_plist <- function(urls = NULL, tube_infos = NULL, label) {
 #' @export
 tp_start_plist <- function(plist_id = NULL, plist_label = NULL, shuffle = FALSE) {
   # check and get plist file
-  path_plist <- chech_user_tp_plist(create_new = FALSE)
+  path_plist <- check_user_tp_plist(create_new = FALSE)
   plist_all <- tp_get_plist()
 
   # attach plist
