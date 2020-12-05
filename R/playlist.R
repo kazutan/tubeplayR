@@ -25,7 +25,7 @@ tp_create_new_plist <- function(urls = NULL, tube_infos = NULL, label) {
   saveRDS(plist, path_plist)
 
   # return
-  return(plist)
+  invisible(plist)
 }
 
 #' play from plist
