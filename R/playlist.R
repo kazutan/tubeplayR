@@ -89,8 +89,12 @@ tp_remove_plist <- function(plist_id = NULL, plist_label = NULL) {
   plist_all <- tp_get_plist()
 
   # remove plist
-  if (!is.null(plist_id) & length(plist_all) < plist_id) {
-    res_plist <- plist_all[-plist_id]
+  if (!is.null(plist_id)) {
+    if (length(plist_all) <= plist_id) {
+      res_plist <- plist_all[-plist_id]
+    } else {
+      stop("Please confirm args.")
+    }
   } else if (!is.null(plist_label)) {
     res_plist <- plist_all
     res_plist[plist_label] <- NULL
